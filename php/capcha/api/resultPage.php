@@ -1,8 +1,8 @@
 <?php
 session_start();
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
         $capcha = $_SESSION['sessionCapcha'];
-        $answer = $_POST['answer'];
+        $answer = $_GET['answer'];
     if($capcha == $answer){
         echo <<<HTML
         <h1>Вы угадали капчу, проходите.</h1>
@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     } else{
         echo <<<HTML
         <h1>Вы не угадали капчу</h1>
-        <a href="/">Назад.</a>
+        <a href="index.php">Назад.</a>
         HTML;
     }
     }

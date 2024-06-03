@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/scripts/session.php';
+include $_SERVER['DOCUMENT_ROOT'].'/api/scripts/session.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +10,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/scripts/session.php';
     <title>Capcha</title>
 </head>
 <body>
-    <img src="scripts/createImg.php" alt="capcha. Включите отображение картинок.">
-    <form action="/resultPage.php" method="post">
+    <img src='scripts/createImg.php' alt="capcha. Включите отображение картинок.">
+    <form action="resultPage.php" method="get">
     <input type="text" name="answer" placeholder="Введите капчу">
     <input type="submit">
     </form>
